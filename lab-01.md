@@ -1,89 +1,82 @@
-Azure Landing Zones
+# Azure Landing Zones
 
-Exercise 1: Introduction to Azure Landing Zone and Deployment Options
+## Exercise 1: Introduction to Azure Landing Zone.
 
-Task 1: Understanding Azure Landing Zone (ALZ) Concepts An Azure Landing Zone (ALZ) is a structured environment in Azure that follows best practices to support application migration, modernization, and scalability. It organizes resources into Application Landing Zones (for hosting workloads) and Platform Landing Zones (for shared services like security, networking, and monitoring). The Enterprise-Scale ALZ, based on the Microsoft Cloud Adoption Framework (CAF), provides strong governance, security, and scalability.
+### Task 1: Understanding Azure Landing Zone (ALZ) Concepts 
 
-Key Features
+An Azure Landing Zone (ALZ) is a structured environment in Azure that follows best practices t     - support application migration, modernization, and scalability. It organizes resources int     - Application Landing Zones (for hosting workloads) and Platform Landing Zones (for shared services like security, networking, and monitoring). The Enterprise-Scale ALZ, based on the Microsoft Cloud Adoption Framework (CAF), provides strong governance, security, and scalability.
 
-1. Modular & Scalable → Supports multiple teams and workloads.
+- **Key Features**
 
-2. Secure by Design → Implements RBAC, Azure Policies, and Network Security.
+  - Modular & Scalable → Supports multiple teams and workloads.
 
-3. Management Groups → Organizes subscriptions for better governance.
+  - Secure by Design → Implements RBAC, Azure Policies, and Network Security.
 
-4. Compliance & Automation → Enforces policies and governance frameworks.
+  - Management Groups → Organizes subscriptions for better governance.
 
-Architecture Overview
+  - Compliance & Automation → Enforces policies and governance frameworks.
 
-1. Management Groups & Subscriptions
+- **Architecture Overview**
 
-o Organizes workloads into categories:
+  1. Management Groups & Subscriptions
 
-§ Identity → Azure AD, PIM.
+     - Organizes workloads int     - categories:
 
-§ Connectivity → Networking, Firewalls.
+        - Identity → Azure AD, PIM.
+        - Connectivity → Networking, Firewalls.
+        - Landing Zones → Workloads & Applications.
 
-§ Landing Zones → Workloads & Applications.
+  2. Networking (Hub-Spoke Model)
 
-2. Networking (Hub-Spoke Model)
+        - Hub → Centralized security & networking (Firewall, ExpressRoute).
+        - Spokes → Isolated environments for applications and workloads.
 
-o Hub → Centralized security & networking (Firewall, ExpressRoute).
+  3. Security & Governance
 
-o Spokes → Isolated environments for applications and workloads.
+        - Azure Policies → Enforce compliance (e.g., restrict VM sizes, ensure encryption, enable Defender for Cloud).
+        - Defender for Cloud → Monitors security risks and threats.
 
-3. Security & Governance
+- **Role of Management Groups, Policies, and Subscriptions**
 
-o Azure Policies → Enforce compliance (e.g., restrict VM sizes, ensure encryption, enable Defender for Cloud).
+  1. Management Groups (MGs)
 
-o Defender for Cloud → Monitors security risks and threats.
+     - Organize subscriptions hierarchically for better governance.
+     - Inherit policies and RBAC roles.
 
-Role of Management Groups, Policies, and Subscriptions
+  2. Azure Policies
 
-1. Management Groups (MGs)
+     - Enforce security, compliance, and governance.
 
-o Organize subscriptions hierarchically for better governance.
+     - Examples:
 
-o Inherit policies and RBAC roles.
+        - Restricting VM locations.
+        - Enforcing tagging for cost management.
+        - Enabling Defender for Cloud.
 
-2. Azure Policies
+  3. Subscriptions
 
-o Enforce security, compliance, and governance.
+     - Used for billing, security, and workload separation.
 
-o Examples:
+     - Best practices include separate subscriptions for:
 
-§ Restricting VM locations.
+        - Landing Zones (Workloads).
+        - Connectivity (Networking, ExpressRoute).
+        - Identity & Management.
 
-§ Enforcing tagging for cost management.
+- **Governance and Automation Benefits**
 
-§ Enabling Defender for Cloud.
+  1. Governance Benefits
 
-3. Subscriptions
+     - Centralized security and compliance.
 
-o Used for billing, security, and workload separation.
+     - Enforces standardized architecture.
 
-o Best practices include separate subscriptions for:
+     - Supports cost management and monitoring.
 
-§ Landing Zones (Workloads).
+  2. Automation Benefits
 
-§ Connectivity (Networking, ExpressRoute).
+     - Enables scalable and repeatable deployments.
 
-§ Identity & Management.
+     - Reduces manual errors using Infrastructure as Code (IaC).
 
-Governance and Automation Benefits
-
-1. Governance Benefits
-
-o Centralized security and compliance.
-
-o Enforces standardized architecture.
-
-o Supports cost management and monitoring.
-
-2. Automation Benefits
-
-o Enables scalable and repeatable deployments.
-
-o Reduces manual errors using Infrastructure as Code (IaC).
-
-o Supports CI/CD for infrastructure to enhance efficiency.
+     - Supports CI/CD for infrastructure to enhance efficiency.

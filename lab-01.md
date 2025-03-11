@@ -1,8 +1,9 @@
-Azure Landing Zones
+# Azure Landing Zones
 
-Exercise 1: Introduction to Azure Landing Zone and Deployment Options
+## Exercise 1: Introduction to Azure Landing Zone and Deployment Options
 
-Task 1: Understanding Azure Landing Zone (ALZ) Concepts An Azure Landing Zone (ALZ) is a structured environment in Azure that follows best practices to support application migration, modernization, and scalability. It organizes resources into Application Landing Zones (for hosting workloads) and Platform Landing Zones (for shared services like security, networking, and monitoring). The Enterprise-Scale ALZ, based on the Microsoft Cloud Adoption Framework (CAF), provides strong governance, security, and scalability.
+### Task 1: Understanding Azure Landing Zone (ALZ) Concepts 
+An Azure Landing Zone (ALZ) is a structured environment in Azure that follows best practices to support application migration, modernization, and scalability. It organizes resources into Application Landing Zones (for hosting workloads) and Platform Landing Zones (for shared services like security, networking, and monitoring). The Enterprise-Scale ALZ, based on the Microsoft Cloud Adoption Framework (CAF), provides strong governance, security, and scalability.
 
 Key Features
 

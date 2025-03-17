@@ -1,0 +1,12 @@
+[
+    {
+        "Name": "Azure-Landing-Zones",
+        "Language": "English",
+        "Files": [
+             {
+                "RawFilePath": "https://raw.githubusercontent.com/supreethr23/Azure-Landing-Zone/refs/heads/main/lab-01.md",
+                "Order": 1
+            } 
+        ]
+    }
+]

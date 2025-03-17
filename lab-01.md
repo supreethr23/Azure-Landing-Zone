@@ -1,8 +1,9 @@
-Azure Landing Zones
+# Azure Landing Zones
 
-Exercise 1: Introduction to Azure Landing Zone and Deployment Options
+## Exercise 1: Introduction to Azure Landing Zone and Deployment Options
 
-Task 1: Understanding Azure Landing Zone (ALZ) Concepts An Azure Landing Zone (ALZ) is a structured environment in Azure that follows best practices to support application migration, modernization, and scalability. It organizes resources into Application Landing Zones (for hosting workloads) and Platform Landing Zones (for shared services like security, networking, and monitoring). The Enterprise-Scale ALZ, based on the Microsoft Cloud Adoption Framework (CAF), provides strong governance, security, and scalability.
+### Task 1: Understanding Azure Landing Zone (ALZ) Concepts 
+An Azure Landing Zone (ALZ) is a structured environment in Azure that follows best practices to support application migration, modernization, and scalability. It organizes resources into Application Landing Zones (for hosting workloads) and Platform Landing Zones (for shared services like security, networking, and monitoring). The Enterprise-Scale ALZ, based on the Microsoft Cloud Adoption Framework (CAF), provides strong governance, security, and scalability.
 
 Key Features
 
@@ -14,76 +15,59 @@ Key Features
 
 4. Compliance & Automation → Enforces policies and governance frameworks.
 
-Architecture Overview
+- Architecture Overview
 
-1. Management Groups & Subscriptions
-
-o Organizes workloads into categories:
-
-§ Identity → Azure AD, PIM.
-
-§ Connectivity → Networking, Firewalls.
-
-§ Landing Zones → Workloads & Applications.
+1. Management Groups & Subscriptions: Organizes workloads into categories:
+ - Identity → Azure AD, PIM.
+ - Connectivity → Networking, Firewalls.
+ - Landing Zones → Workloads & Applications.
 
 2. Networking (Hub-Spoke Model)
 
-o Hub → Centralized security & networking (Firewall, ExpressRoute).
-
-o Spokes → Isolated environments for applications and workloads.
+ - Hub → Centralized security & networking (Firewall, ExpressRoute).
+ - Spokes → Isolated environments for applications and workloads.
 
 3. Security & Governance
 
-o Azure Policies → Enforce compliance (e.g., restrict VM sizes, ensure encryption, enable Defender for Cloud).
-
-o Defender for Cloud → Monitors security risks and threats.
+ - Azure Policies → Enforce compliance (e.g., restrict VM sizes, ensure encryption, enable Defender for Cloud).
+ - Defender for Cloud → Monitors security risks and threats.
 
 Role of Management Groups, Policies, and Subscriptions
 
-1. Management Groups (MGs)
-
-o Organize subscriptions hierarchically for better governance.
-
-o Inherit policies and RBAC roles.
+1. Management Groups
+ - Organize subscriptions hierarchically for better governance.
+ - Inherit policies and RBAC roles.
 
 2. Azure Policies
+ - Enforce security, compliance, and governance.
+ - Examples:
 
-o Enforce security, compliance, and governance.
+    i. Restricting VM locations.
 
-o Examples:
+    ii. Enforcing tagging for cost management.
 
-§ Restricting VM locations.
-
-§ Enforcing tagging for cost management.
-
-§ Enabling Defender for Cloud.
+    iii. Enabling Defender for Cloud.
 
 3. Subscriptions
-
-o Used for billing, security, and workload separation.
-
-o Best practices include separate subscriptions for:
-
-§ Landing Zones (Workloads).
-
-§ Connectivity (Networking, ExpressRoute).
-
-§ Identity & Management.
+ - Used for billing, security, and workload separation.
+ - Best practices include separate subscriptions for:
+ - Landing Zones (Workloads).
+ - Connectivity (Networking, ExpressRoute).
+ - Identity & Management.
 
 Governance and Automation Benefits
 
 1. Governance Benefits
-
-o Centralized security and compliance.
-
-o Enforces standardized architecture.
-
-o Supports cost management and monitoring.
+ - Centralized security and compliance.
+ - Enforces standardized architecture.
+ - Supports cost management and monitoring.
 
 2. Automation Benefits
+ - Enables scalable and repeatable deployments.
+ - Reduces manual errors using Infrastructure as Code (IaC).
+ - Supports CI/CD for infrastructure to enhance efficiency.
 
-o Enables scalable and repeatable deployments.
 
-o Reduces manual errors using Infrastructure as Code (IaC).
+### Task 2: Deploying ALZ using ARM or Bicep Templates
 
-o Supports CI/CD for infrastructure to enhance efficiency.
+1. 

@@ -68,6 +68,25 @@ Governance and Automation Benefits
  - Supports CI/CD for infrastructure to enhance efficiency.
 
 
-### Task 2: Deploying ALZ using ARM or Bicep Templates
+### Task 2: Deploying Azure Landing Zone.
 
-1. 
+1. Search and Navigate to **Entra ID** and click on **Properties**, under **Access management for Azure resources** and turn on the **toggle**.This allows elevated access to the user.
+
+1. Now navigate to **CloudShell** and click on **Powershell** to go to the powershell mode and run the below commad to give the user with owner access at the tenant level.
+
+   ```powershell
+   New-AzRoleAssignment -SignInName "[userId]" -Scope "/" -RoleDefinitionName "Owner"
+   ```
+   **Note:** Replace **[userId]** with **<inject key="AzureAdUserEmail"></inject>**.
+
+1. We will deploy the Azure Landing Zone using either ARM templates or Bicep. You can choose whichever approach you prefer.
+
+ - ARM: Copy the below hyperlink to deploy the resources for azure landing zone
+
+    [![Deploy to Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
+
+ - Bicep:
+
+    ![Deploy to Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)
+
+4. **ARM templates** are verbose JSON files that offer full Azure support but can be complex to manage, whereas **Bicep** is a more concise, modular, and human-readable DSL that simplifies infrastructure deployment while still compiling down to ARM.

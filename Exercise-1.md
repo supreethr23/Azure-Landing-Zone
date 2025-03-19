@@ -42,7 +42,9 @@ Role of Management Groups, Policies, and Subscriptions
  - Enforce security, compliance, and governance.
  - Examples:
     i. Restricting VM locations.
+
     ii. Enforcing tagging for cost management.
+
     iii. Enabling Defender for Cloud.
 
 3. Subscriptions

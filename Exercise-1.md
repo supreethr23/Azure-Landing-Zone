@@ -5,8 +5,13 @@
 ### Task 1: Understanding Azure Landing Zone (ALZ) Concepts 
 An Azure Landing Zone (ALZ) is a structured environment in Azure that follows best practices to support application migration, modernization, and scalability. It organizes resources into Application Landing Zones (for hosting workloads) and Platform Landing Zones (for shared services like security, networking, and monitoring). The Enterprise-Scale ALZ, based on the Microsoft Cloud Adoption Framework (CAF), provides strong governance, security, and scalability.
 
-Key Features
+An Azure landing zone consists of platform landing zones and application landing zones.
+- **Platform Landing Zone**: A subscription that provides shared services like identity, connectivity, and management for all applications. These are managed by central IT teams. Examples include Identity, Management, and Connectivity subscriptions.
+- **Application Landing Zone**: A subscription dedicated to hosting specific applications. These are pre-configured with policies and controls through management groups. Examples include Landing Zone A1 and Landing Zone A2 subscriptions.
 
+Platform Landing Zones contain shared infrastructure services, while Application Landing Zones host the actual business applications.
+
+**Key Features:**
 1. Modular & Scalable → Supports multiple teams and workloads.
 
 2. Secure by Design → Implements RBAC, Azure Policies, and Network Security.
@@ -15,8 +20,7 @@ Key Features
 
 4. Compliance & Automation → Enforces policies and governance frameworks.
 
-- Architecture Overview
-
+**Architecture Overview:**
 1. Management Groups & Subscriptions: Organizes workloads into categories:
  - Identity → Azure AD, PIM.
  - Connectivity → Networking, Firewalls.
@@ -32,7 +36,7 @@ Key Features
  - Azure Policies → Enforce compliance (e.g., restrict VM sizes, ensure encryption, enable Defender for Cloud).
  - Defender for Cloud → Monitors security risks and threats.
 
-Role of Management Groups, Policies, and Subscriptions
+**Role of Management Groups, Policies, and Subscriptions:**
 
 1. Management Groups
  - Organize subscriptions hierarchically for better governance.
@@ -55,8 +59,7 @@ Role of Management Groups, Policies, and Subscriptions
  - Connectivity (Networking, ExpressRoute).
  - Identity & Management.
 
-Governance and Automation Benefits
-
+**Governance and Automation Benefits:**
 1. Governance Benefits
  - Centralized security and compliance.
  - Enforces standardized architecture.
@@ -67,7 +70,24 @@ Governance and Automation Benefits
  - Reduces manual errors using Infrastructure as Code (IaC).
  - Supports CI/CD for infrastructure to enhance efficiency.
 
+### Task 2: Deploying Azure Landing Zone.
+In this task, we will deploy a Platform Landing Zone using **ARM** or **Bicep**.
 
-### Task 2: Deploying ALZ using ARM or Bicep Templates
+1. Search and Navigate to **Entra ID** and click on **Properties**, under **Access management for Azure resources** and turn on the **toggle**.This allows elevated access to the user.
 
-1. 
+1. Now navigate to **CloudShell** and click on **Powershell** to go to the powershell mode and run the below commad to give the user with owner access at the tenant level.
+
+   ```powershell
+   New-AzRoleAssignment -SignInName "[userId]" -Scope "/" -RoleDefinitionName "Owner"
+   ```
+   **Note:** Replace **[userId]** with **<inject key="AzureAdUserEmail"></inject>**.
+
+1. We will deploy the Azure Landing Zone using either ARM templates or Bicep. You can choose whichever approach you prefer.
+
+ - **ARM template**: Copy the below hyperlink to deploy the resources for azure landing zone
+
+    [![Deploy to Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
+
+ - **Bicep**:
+
+4. **ARM templates** are verbose JSON files that offer full Azure support but can be complex to manage, whereas **Bicep** is a more concise, modular, and human-readable DSL that simplifies infrastructure deployment while still compiling down to ARM.

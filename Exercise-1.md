@@ -41,6 +41,7 @@ Role of Management Groups, Policies, and Subscriptions
 2. Azure Policies
  - Enforce security, compliance, and governance.
  - Examples:
+
     i. Restricting VM locations.
 
     ii. Enforcing tagging for cost management.

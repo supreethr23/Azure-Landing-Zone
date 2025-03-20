@@ -4,9 +4,17 @@
         "Language": "English",
         "Files": [
              {
-                "RawFilePath": "https://raw.githubusercontent.com/supreethr23/Azure-Landing-Zone/refs/heads/main/lab-01.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Landing-Zone/refs/heads/main/Exercise-1.md",
                 "Order": 1
-            } 
+             },
+             {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Landing-Zone/refs/heads/main/Exercise-2.md",
+                "Order": 2
+             },
+             {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Landing-Zone/refs/heads/main/Exercise-3.md",
+                "Order": 3
+             }
         ]
     }
 ]

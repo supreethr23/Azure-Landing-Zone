@@ -1,6 +1,6 @@
-# Innovate with AI
+# Azure Landing Zones
 
-### Overall Estimated Duration: 8 Hours
+### Overall Estimated Duration: 4 Hours
 
 ## Overview
 

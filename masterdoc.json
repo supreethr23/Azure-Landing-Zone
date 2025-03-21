@@ -4,12 +4,20 @@
         "Language": "English",
         "Files": [
              {
-                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Landing-Zone/refs/heads/main/Exercise-1.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Landing-Zone/refs/heads/main/Getting-Started.md",
                 "Order": 1
              },
              {
-                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Landing-Zone/refs/heads/main/Exercise-2.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Landing-Zone/refs/heads/main/Exercise-1.md",
                 "Order": 2
+             }
+             {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Landing-Zone/refs/heads/main/Exercise-2.md",
+                "Order": 3
+             }
+             {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Landing-Zone/refs/heads/main/Exercise-3.md",
+                "Order": 4
              }
         ]
     }

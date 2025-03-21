@@ -10,10 +10,6 @@
              {
                 "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Landing-Zone/refs/heads/main/Exercise-2.md",
                 "Order": 2
-             },
-             {
-                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Landing-Zone/refs/heads/main/Exercise-3.md",
-                "Order": 3
              }
         ]
     }

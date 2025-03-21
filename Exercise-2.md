@@ -1,58 +1,79 @@
 ## Exercise 2: Reviewing the Deployed ALZ Foundation
 
-### **Task 1: Exploring the Management Group (MG) Hierarchy and Subscriptions**  
-### **Step 1: Validate the Created Management Groups**
+In this exercise, you will explore the **Management Group (MG) hierarchy and subscriptions**, followed by validating **Azure policies and security controls** to ensure governance and compliance.
+
+### Objectives
+In this exercise, you will complete the following tasks:
+   - Task 1: Exploring the Management Group (MG) Hierarchy and Subscriptions
+   - Task 2: Validating Azure Policies and Security Controls
+
+### Task 1: Exploring the Management Group (MG) Hierarchy and Subscriptions
 
 1. In the [Azure Portal](https://portal.azure.com), search for **Management Groups** in the search bar and select it.  
 
-1. Expand the **managementgroup<inject key="DeploymentID" enableCopy="false"></inject>** under the Root Management Group nto verify the management groups like **managementgroup<inject key="DeploymentID" enableCopy="false"></inject>-decommissioned**, **managementgroup<inject key="DeploymentID" enableCopy="false"></inject>-landingzones**, 
-**managementgroup<inject key="DeploymentID" enableCopy="false"></inject>-platform**, and **managementgroup<inject key="DeploymentID" enableCopy="false"></inject>-sandboxes**.
+    ![Image](./media/ex2task1s1.png)
+
+1. Expand the **mg<inject key="DeploymentID" enableCopy="false"></inject>** under the Root Management Group to verify the management groups like **mg<inject key="DeploymentID" enableCopy="false"></inject>-decommissioned**, **mg<inject key="DeploymentID" enableCopy="false"></inject>-landingzones**, 
+**mg<inject key="DeploymentID" enableCopy="false"></inject>-platform**, and **mg<inject key="DeploymentID" enableCopy="false"></inject>-sandboxes**.
 
 1. Each of these management groups have different functions which are listed below
     - **Tenant Root Group** – The top-level management group that contains all subscriptions in the tenant.
-    - **managementgroup<inject key="DeploymentID" enableCopy="false"></inject>** – A parent management group organizing all child groups under the tenant.
-    - **managementgroup<inject key="DeploymentID" enableCopy="false"></inject>-decommissioned** – Holds resources or subscriptions that are no longer in active use.
-    - **managementgroup<inject key="DeploymentID" enableCopy="false"></inject>-landingzones** – Manages enterprise workloads and landing zones for production and development.
-    - **managementgroup<inject key="DeploymentID" enableCopy="false"></inject>-platform** – Contains shared services like identity, networking, and management resources.
-    - **managementgroup<inject key="DeploymentID" enableCopy="false"></inject>-sandboxes** – Isolates non-production environments for testing and experimentation.
- 
+    - **mg<inject key="DeploymentID" enableCopy="false"></inject>** – A parent management group organizing all child groups under the tenant.
+    - **mg<inject key="DeploymentID" enableCopy="false"></inject>-decommissioned** – Holds resources or subscriptions that are no longer in active use.
+    - **mg<inject key="DeploymentID" enableCopy="false"></inject>-landingzones** – Manages enterprise workloads and landing zones for production and development.
+    - **mg<inject key="DeploymentID" enableCopy="false"></inject>-platform** – Contains shared services like identity, networking, and management resources.
+    - **mg<inject key="DeploymentID" enableCopy="false"></inject>-sandboxes** – Isolates non-production environments for testing and experimentation.
+
+    ![Image](./media/ex2task1s3.png)
+
 1. Click on each **Management Group** and check **Subscriptions** assigned under them.
 
-1. Verify that inherited policies from parent management groups are correctly applied. 
- 
-1. In the **Management Groups** page, select a management group (e.g., **Platform** or **LandingZones**). 
+    ![Image](./media/ex2task1s4.png)
 
-1. Navigate to the **Policy** section:  
-   - Click on **Policy** in the left menu.  
-   - Select **Assignments** to view policies applied at that level.  
+1. We can also see that few Subscriptions are not assigned to any management groups, which we are going to in further exercises for different purposes.
 
-1. Identify built-in Azure Policies.  
 
-1. Click on **Compliance** to check if the applied policies are compliant.
+### Task 2: Validating Azure Policies and Security Controls
 
-## **Task 2: Validating Azure Policies and Security Controls**  
+1. In the **Azure Portal**, search for **Policy** in the search bar. 
 
-1. In the **Azure Portal**, search for **Policy** in the search bar.  
-2. Click on **Policy** under **Governance**.  
-3. In the **Policy | Assignments** tab:  
+    ![Image](./media/ex2task2s1.png) 
+
+1. Click on **Policy** under **Authoring**.  
+
+1. In the **Policy | Assignments** tab:  
    - Review policy assignments applied to subscriptions and management groups.  
-   - Check the **Scope** (i.e., where the policy is enforced).  
+   - Check the **Scope**, where the policy is enforced.  
 
-1. Go to **Policy → Compliance**.  
-2. Review the **Security Benchmark compliance** (e.g., **Azure Security Benchmark** policy).  
-3. Identify non-compliant policies and click on them to view affected resources.  
-4. For any **non-compliant policy**, take note of:  
-   - The reason for non-compliance.  
-   - Recommended remediation steps.  
+    ![Image](./media/ex2task2s3.png) 
 
 1. Check how policies are enforced across multiple subscriptions:  
    - In **Policy → Assignments**, filter by subscription.  
    - Identify any missing policy assignments at the subscription level. 
 
-2. Verify if **Deny, Audit, or Enforce** policies are correctly applied to prevent non-compliance. 
- 
-3. If needed, assign a new policy:  
-   - Click **Assign Policy** → Choose a built-in or custom policy.  
-   - Select the **Scope** (Management Group or Subscription).  
-   - Choose **Effect** (Audit, Deny, Append, Modify).  
-   - Click **Assign**.  
+    ![Image](./media/ex2task2s4.png) 
+
+1. Verify if **Deny, Audit, or Enforce** policies are correctly applied to prevent non-compliance. 
+
+1. Go to **Compliance** from the left pane. 
+
+1. Review the **Security Benchmark compliance**.
+
+    ![Image](./media/ex2task2s5.png) 
+
+1. Identify non-compliant policies and click on them to view affected resources.  
+
+    ![Image](./media/ex2task2s6.png) 
+
+1. For any **non-compliant policy**, review:  
+   - The reason for non-compliance.    
+
+    ![Image](./media/ex2task2s7.png) 
+
+
+## Review
+In this exercise you have completed the following:
+   - Explored the Management Group (MG) Hierarchy and Subscriptions.
+   - Validated Azure Policies and Security Controls.
+
+

@@ -11,7 +11,7 @@
 
 1. From the Management Groups page, click on the App Landing Zone Management Group.
 
-1. Click **Add** or **Add subscription** button and select the subscription you want to add from the dropdown list.
+1. Click **Add** or **Add subscription** button and **Select** the subscription you want to add from the dropdown list.
 
 1. Click **Save** to add the subscription to the Management Group and wait for the operation to complete.
 
